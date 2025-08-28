@@ -16,6 +16,7 @@
     --color-secondary: #ea580c;
     --color-highlight: #facc15;
     --color-border: #d9770626;
+    --color-socmed: #bebebe;
   }
 
   body {
@@ -78,7 +79,7 @@
     @apply p-4 space-y-2;
   }
   .card-title {
-    @apply text-xl tracking-wider font-semibold text-[var(--color-text)];
+    @apply text-xl tracking-wider font-medium text-[var(--color-text)];
   }
   .card-subtitle {
     @apply text-sm text-[var(--color-primary)];
@@ -87,13 +88,16 @@
     @apply text-sm text-[var(--color-text-muted)];
   }
   .card-title-text {
-    @apply inline-block bg-[var(--color-text-surface)] tracking-wider font-extralight rounded-md py-1 px-2 text-xs md:text-sm text-[var(--color-text-muted)];
+    @apply inline-block bg-[var(--color-text-surface)] tracking-wider font-extralight rounded-md py-1 px-2 md:px-4 text-[10px] md:text-sm text-white/70;
   }
   .card-icon {
     @apply text-[var(--color-icon)];
   }
   .card-border {
     @apply bg-[#292623] p-1 md:p-2 rounded-lg border-1 border-[#d977063d];
+  }
+  .socmed-icon {
+    @apply w-7 h-7 text-[var(--color-socmed)] hover:text-white transition-all delay-100 duration-200 ease-in-out fill-current;
   }
 
   /* ===== Image ===== */

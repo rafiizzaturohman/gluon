@@ -8,6 +8,7 @@ import {
   MapPinIcon,
   PhoneIcon,
 } from "@heroicons/react/24/outline";
+import { InstagramIcon, LinkedInIcon, GitHubIcon } from "@/app/icons";
 
 const profileInfo = [
   {
@@ -35,7 +36,7 @@ const profileInfo = [
 const MyPersonal = () => {
   return (
     <aside className="w-auto md:w-1/4">
-      <div className="relative profile-card md:fixed p-6 md:px-8 md:py-16 shadow-lg space-y-2">
+      <div className="relative profile-card md:fixed p-6 md:px-8 md:py-16 shadow-lg space-y-8">
         <div className="flex flex-row md:flex-col gap-4 md:gap-8 items-center md:text-center">
           <div className="profile-image">
             <Image
@@ -46,7 +47,7 @@ const MyPersonal = () => {
             />
           </div>
 
-          <div className="space-y-0.5 md:space-y-1.5">
+          <div className="space-y-0.5 md:space-y-4 font-sans">
             <h2 className="card-title text-base md:text-lg md:text-center">
               Rafi Izzaturohman
             </h2>
@@ -65,15 +66,29 @@ const MyPersonal = () => {
                 <item.icon className="card-icon w-4 md:w-6 h-4 md:h-6" />
               </div>
               <div className="space-y-0.5">
-                <p className="uppercase text-[10px] md:text-xs tracking-wider">
+                <p className="uppercase text-[9px] md:text-xs tracking-wider">
                   {item.label}
                 </p>
-                <p className="text-white text-xs md:text-sm tracking-wide">
+                <p className="text-white text-[10px] md:text-sm tracking-wide">
                   {item.value}
                 </p>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="flex flex-row gap-2 justify-center items-center text-center">
+          <a href="https://www.github.com/rafiizzaturohman/" target="_blank">
+            <GitHubIcon />
+          </a>
+
+          <a href="https://www.instagram.com/fiizzat" target="_blank">
+            <InstagramIcon />
+          </a>
+
+          <a href="https://www.linkedin.com/in/rafiizza/">
+            <LinkedInIcon />
+          </a>
         </div>
       </div>
     </aside>
