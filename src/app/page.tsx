@@ -3,7 +3,11 @@ import MyPersonal from "@/components/personal";
 
 const Home = () => {
   return (
-    <main className="min-h-screen flex flex-col md:flex-row gap-2 md:gap-4 lg:gap-6 px-2 py-4 md:py-20">
+    <main
+      className="min-h-screen flex flex-col md:flex-row gap-4 lg:gap-8 
+      px-3 sm:px-4 md:px-6 lg:px-10 py-4 md:py-10 lg:py-16"
+    >
+      {/* Left Fixed Card */}
       <MyPersonal />
 
       {/* Right Scrollable Card */}

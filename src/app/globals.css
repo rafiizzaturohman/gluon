@@ -56,7 +56,9 @@
   /* ===== Card ===== */
   .content-card {
     @apply bg-[var(--color-surface)] border border-[var(--color-border)]
-           rounded-2xl shadow-md overflow-hidden transition-all duration-300;
+            p-3 sm:p-5 md:p-6 lg:p-8 
+            space-y-6 w-full 
+            rounded-2xl shadow-md overflow-hidden transition-all duration-300;
   }
 
   .profile-card {
@@ -79,7 +81,7 @@
     @apply p-4 space-y-2;
   }
   .card-title {
-    @apply text-xl tracking-wider font-medium text-[var(--color-text)];
+    @apply text-sm sm:text-base md:text-lg lg:text-xl font-semibold tracking-wider text-[var(--color-text)];
   }
   .card-subtitle {
     @apply text-sm text-[var(--color-primary)];
@@ -88,7 +90,7 @@
     @apply text-sm text-[var(--color-text-muted)];
   }
   .card-title-text {
-    @apply max-w-max bg-[var(--color-text-surface)] tracking-widest font-extralight rounded-md py-1 px-2 md:px-4 text-[10px] md:text-sm text-white/70;
+    @apply text-xs sm:text-sm md:text-base lg:text-base max-w-max bg-[var(--color-text-surface)] tracking-widest font-extralight rounded-md py-1 px-2 md:px-4 text-[10px] text-white/70;
   }
   .card-icon {
     @apply text-[var(--color-icon)];
@@ -97,20 +99,29 @@
     @apply bg-[#292623] p-1 md:p-2 rounded-lg border-1 border-[#d977063d];
   }
   .socmed-icon {
-    @apply w-5 h-5 md:w-7 md:h-7 text-[var(--color-socmed)] hover:text-white transition-all delay-100 duration-200 ease-in-out fill-current;
+    @apply w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 text-[var(--color-socmed)] hover:text-white transition-all delay-100 duration-200 ease-in-out fill-current;
   }
   .profile-content {
-    @apply flex flex-row md:flex-col gap-4 md:gap-8 items-center md:text-center;
+    @apply flex flex-row md:flex-col items-center gap-3 sm:gap-4 md:gap-6;
   }
   .page-title {
-    @apply relative text-2xl md:text-3xl tracking-wider font-bold flex items-center gap-2 pb-2
+    @apply relative  text-lg sm:text-xl md:text-2xl lg:text-3xl tracking-wider font-bold flex items-center gap-2 pb-2
              after:content-[''] after:absolute after:-bottom-1 after:left-0
              after:w-[40px] after:h-[4px] after:bg-[var(--color-primary)] after:rounded-full;
+  }
+  .profile-toggle {
+    @apply flex items-center gap-2 text-xs sm:text-sm text-gray-300 hover:text-white absolute top-0 right-0;
+  }
+  .card-label {
+    @apply uppercase text-[9px] sm:text-[10px] md:text-xs tracking-wider;
+  }
+  .card-value {
+    @apply text-white text-[10px] sm:text-xs md:text-sm tracking-wide;
   }
 
   /* ===== Image ===== */
   .profile-image {
-    @apply relative rounded-xl object-cover bg-slate-600/20 w-20 h-20 md:w-42 md:h-42;
+    @apply relative rounded-xl object-cover bg-slate-600/20 w-16 h-16 sm:w-20 sm:h-20 md:w-36 md:h-36;
   }
 
   /* ===== Buttons ===== */
@@ -149,4 +160,28 @@
       @apply grid-cols-2;
     }
   }
+}
+
+/* ===== Custom Scrollbar Dark Theme ===== */
+::-webkit-scrollbar {
+  width: 8px; /* lebar scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* background area */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d97706; /* warna utama (amber-600) */
+  border-radius: 9999px; /* biar bulat */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b; /* hover warna amber-500 */
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d97706 transparent;
 }

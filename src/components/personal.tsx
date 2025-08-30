@@ -45,12 +45,12 @@ const MyPersonal = () => {
 
   // Cek ukuran layar
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    const mediaQuery = window.matchMedia("(min-width: 1024px)"); // desktop breakpoint
 
     const handleChange = (e: MediaQueryListEvent | MediaQueryList) => {
       if ("matches" in e) {
         setIsDesktop(e.matches);
-        setIsOpen(e.matches); // kalau desktop = true, mobile = false
+        setIsOpen(e.matches); // kalau desktop terbuka default
       } else {
         setIsDesktop((e as MediaQueryList).matches);
         setIsOpen((e as MediaQueryList).matches);
@@ -66,34 +66,35 @@ const MyPersonal = () => {
   }, []);
 
   return (
-    <aside className="w-auto md:w-1/4">
+    <aside className="w-full sm:w-[90%] md:w-[60%] lg:w-1/4 mx-auto">
       <div
-        className={`relative profile-card md:fixed 
-        p-6 md:px-8 md:pt-16 shadow-lg space-y-7
+        className={`relative profile-card lg:fixed 
+        p-4 sm:p-6 md:px-8 md:pt-12 lg:pt-16 shadow-lg space-y-6
         transition-all duration-500 ease-in-out
-        ${isOpen ? "pb-6 md:pb-6" : "pb-0 md:pb-0"}
+        ${isOpen ? "pb-6" : "pb-0"}
         `}
       >
         {/* Profile Header */}
-        <div className="profile-content flex flex-row md:flex-col items-center gap-3 md:gap-6">
+        <div className="profile-content">
           <div className="profile-image">
-            <Image src={MyPict} alt="Profile picture" fill priority />
+            <Image
+              src={MyPict}
+              alt="Profile picture"
+              fill
+              className="rounded-xl object-cover"
+              priority
+            />
           </div>
 
-          <div className="flex flex-col gap-2 md:items-center">
-            <h2 className="card-title text-base md:text-lg">
-              Rafi Izzaturohman
-            </h2>
+          <div className="flex flex-col gap-2 md:gap-3 md:items-center">
+            <h2 className="card-title">Rafi Izzaturohman</h2>
             <p className="card-title-text">Web Developer</p>
           </div>
         </div>
 
-        {/* Toggle button (hanya tampil di mobile) */}
+        {/* Toggle button (hanya tampil di mobile/tablet) */}
         {!isDesktop && (
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="flex items-center gap-2 text-sm text-gray-300 hover:text-white absolute top-0 right-0"
-          >
+          <button onClick={() => setIsOpen(!isOpen)} className="profile-toggle">
             <div
               className={`relative overflow-hidden
                 rounded-bl-[14px] rounded-tr-[14px]
@@ -128,7 +129,7 @@ const MyPersonal = () => {
                     transition={{ duration: 0.3 }}
                     className="relative"
                   >
-                    <ChevronUpIcon className="w-4 h-4" />
+                    <ChevronUpIcon className="w-4 h-4 sm:w-5 sm:h-5" />
                   </motion.div>
                 ) : (
                   <motion.div
@@ -138,7 +139,7 @@ const MyPersonal = () => {
                     transition={{ duration: 0.3 }}
                     className="relative"
                   >
-                    <ChevronDownIcon className="w-4 h-4" />
+                    <ChevronDownIcon className="w-4 h-4 sm:w-5 sm:h-5" />
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -154,7 +155,7 @@ const MyPersonal = () => {
               animate={{ opacity: 0.2, scaleX: 1 }}
               exit={{ opacity: 0, scaleX: 0 }}
               transition={{ duration: 0.4 }}
-              className="origin-center md:opacity-20 my-6 md:my-10"
+              className="origin-center md:opacity-20 my-4 sm:my-6 md:my-8 lg:my-10"
             />
           )}
         </AnimatePresence>
@@ -168,47 +169,31 @@ const MyPersonal = () => {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="overflow-hidden md:overflow-visible space-y-4 md:space-y-10"
+              className="overflow-hidden lg:overflow-visible space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10"
             >
               {profileInfo.map((item, index) => (
-                <div key={index} className="flex flex-row gap-4 items-center">
+                <div
+                  key={index}
+                  className="flex flex-row gap-3 sm:gap-4 items-center"
+                >
                   <div className="card-border">
-                    <item.icon className="card-icon w-4 md:w-6 h-4 md:h-6" />
+                    <item.icon className="card-icon w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
                   </div>
-                  {item.label === "email" ? (
+                  {item.label === "email" || item.label === "phone" ? (
                     <div className="space-y-0.5">
-                      <p className="uppercase text-[9px] md:text-xs tracking-wider">
-                        {item.label}
-                      </p>
+                      <p className="card-label">{item.label}</p>
                       <a
                         href={item.link}
                         target="_blank"
-                        className="text-white text-[10px] md:text-sm tracking-wide"
-                      >
-                        {item.value}
-                      </a>
-                    </div>
-                  ) : item.label === "phone" ? (
-                    <div className="space-y-0.5">
-                      <p className="uppercase text-[9px] md:text-xs tracking-wider">
-                        {item.label}
-                      </p>
-                      <a
-                        href={item.link}
-                        target="_blank"
-                        className="text-white text-[10px] md:text-sm tracking-wide"
+                        className="card-value"
                       >
                         {item.value}
                       </a>
                     </div>
                   ) : (
                     <div className="space-y-0.5">
-                      <p className="uppercase text-[9px] md:text-xs tracking-wider">
-                        {item.label}
-                      </p>
-                      <p className="text-white text-[10px] md:text-sm tracking-wide">
-                        {item.value}
-                      </p>
+                      <p className="card-label">{item.label}</p>
+                      <p className="card-value">{item.value}</p>
                     </div>
                   )}
                 </div>
@@ -219,11 +204,11 @@ const MyPersonal = () => {
                 animate={{ opacity: 0.2, scaleX: 1 }}
                 exit={{ opacity: 0, scaleX: 0 }}
                 transition={{ duration: 0.4 }}
-                className="origin-center md:opacity-20 my-6 md:my-6"
+                className="origin-center md:opacity-20 my-4 sm:my-6 md:my-8"
               />
 
               {/* Socials */}
-              <div className="flex flex-row gap-2 justify-center items-center text-center">
+              <div className="flex flex-row gap-3 sm:gap-4 justify-center items-center text-center">
                 <a
                   href="https://www.github.com/rafiizzaturohman/"
                   target="_blank"
