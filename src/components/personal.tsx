@@ -42,15 +42,16 @@ const MyPersonal = () => {
 
   return (
     <aside className="w-auto md:w-1/4">
-      <div className="relative profile-card md:fixed p-6 md:px-8 md:py-16 shadow-lg space-y-8">
+      <div
+        className={`relative profile-card md:fixed 
+        p-6 md:px-8 md:pt-16 shadow-lg space-y-8
+        transition-all duration-500 ease-in-out
+        ${isOpen ? "pb-6 md:pb-6" : "pb-0 md:pb-2"}
+        `}
+      >
         <div className="profile-content">
           <div className="profile-image">
-            <Image
-              src={MyPict}
-              alt="Profile picture"
-              fill // automatically fills the parent div
-              priority
-            />
+            <Image src={MyPict} alt="Profile picture" fill priority />
           </div>
 
           <div className="space-y-0.5 md:space-y-4 font-sans">
@@ -62,18 +63,18 @@ const MyPersonal = () => {
           </div>
         </div>
 
+        {/* Toggle button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="flex md:hidden items-center gap-2 text-sm text-gray-300 hover:text-white absolute top-0 right-0"
         >
           <div
-            className={`
-          relative overflow-hidden
-          rounded-bl-[14px] rounded-tr-[14px]
-          p-1.5 border-[#d97706]
-          transition-all duration-300 ease-in-out
-          ${isOpen ? "border-b border-r" : "border-t border-l"}
-        `}
+            className={`relative overflow-hidden
+              rounded-bl-[14px] rounded-tr-[14px]
+              p-1.5 border-[#d97706]
+              transition-all duration-300 ease-in-out
+              ${isOpen ? "border-b border-r" : "border-t border-l"}
+            `}
           >
             {/* Layer 1 (default gradient) */}
             <motion.div
@@ -120,44 +121,75 @@ const MyPersonal = () => {
           </div>
         </button>
 
-        <hr className="opacity-20 hidden md:block md:my-10" />
+        {/* Animated HR */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.hr
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={{ opacity: 0.2, scaleX: 1 }}
+              exit={{ opacity: 0, scaleX: 0 }}
+              transition={{ duration: 0.4 }}
+              className="origin-center md:opacity-20 my-6 md:my-10"
+            />
+          )}
+        </AnimatePresence>
 
         {/* Profile Information */}
-        <div
-          className={`transition-all duration-500 ease-in-out overflow-hidden md:overflow-visible ${
-            isOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
-          } md:max-h-none md:opacity-100 space-y-4 md:space-y-10`}
-        >
-          {profileInfo.map((item, index) => (
-            <div key={index} className="flex flex-row gap-4 items-center">
-              <div className="card-border">
-                <item.icon className="card-icon w-4 md:w-6 h-4 md:h-6" />
+        {/* Profile Information */}
+        <AnimatePresence initial={false}>
+          {isOpen && (
+            <motion.div
+              key="profile-info"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="overflow-hidden md:overflow-visible space-y-4 md:space-y-10"
+            >
+              {profileInfo.map((item, index) => (
+                <div key={index} className="flex flex-row gap-4 items-center">
+                  <div className="card-border">
+                    <item.icon className="card-icon w-4 md:w-6 h-4 md:h-6" />
+                  </div>
+                  <div className="space-y-0.5">
+                    <p className="uppercase text-[9px] md:text-xs tracking-wider">
+                      {item.label}
+                    </p>
+                    <p className="text-white text-[10px] md:text-sm tracking-wide">
+                      {item.value}
+                    </p>
+                  </div>
+                </div>
+              ))}
+
+              {isOpen && (
+                <motion.hr
+                  initial={{ opacity: 0, scaleX: 0 }}
+                  animate={{ opacity: 0.2, scaleX: 1 }}
+                  exit={{ opacity: 0, scaleX: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="origin-center md:opacity-20 my-6 md:my-10"
+                />
+              )}
+
+              {/* Socials */}
+              <div className="flex flex-row gap-2 justify-center items-center text-center">
+                <a
+                  href="https://www.github.com/rafiizzaturohman/"
+                  target="_blank"
+                >
+                  <GitHubIcon />
+                </a>
+                <a href="https://www.instagram.com/fiizzat" target="_blank">
+                  <InstagramIcon />
+                </a>
+                <a href="https://www.linkedin.com/in/rafiizza/">
+                  <LinkedInIcon />
+                </a>
               </div>
-              <div className="space-y-0.5">
-                <p className="uppercase text-[9px] md:text-xs tracking-wider">
-                  {item.label}
-                </p>
-                <p className="text-white text-[10px] md:text-sm tracking-wide">
-                  {item.value}
-                </p>
-              </div>
-            </div>
-          ))}
-
-          <div className="flex flex-row gap-2 justify-center items-center text-center">
-            <a href="https://www.github.com/rafiizzaturohman/" target="_blank">
-              <GitHubIcon />
-            </a>
-
-            <a href="https://www.instagram.com/fiizzat" target="_blank">
-              <InstagramIcon />
-            </a>
-
-            <a href="https://www.linkedin.com/in/rafiizza/">
-              <LinkedInIcon />
-            </a>
-          </div>
-        </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </aside>
   );
