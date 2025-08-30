@@ -20,7 +20,7 @@
   }
 
   body {
-    @apply bg-[var(--color-bg)] text-[var(--color-text)] font-sans leading-relaxed;
+    @apply bg-[var(--color-bg)] text-[var(--color-text)] leading-relaxed;
     font-family: "Inter", sans-serif;
   }
 
@@ -97,7 +97,10 @@
     @apply bg-[#292623] p-1 md:p-2 rounded-lg border-1 border-[#d977063d];
   }
   .socmed-icon {
-    @apply w-7 h-7 text-[var(--color-socmed)] hover:text-white transition-all delay-100 duration-200 ease-in-out fill-current;
+    @apply w-5 h-5 md:w-7 md:h-7 text-[var(--color-socmed)] hover:text-white transition-all delay-100 duration-200 ease-in-out fill-current;
+  }
+  .profile-content {
+    @apply flex flex-row md:flex-col gap-4 md:gap-8 items-center md:text-center;
   }
 
   /* ===== Image ===== */
