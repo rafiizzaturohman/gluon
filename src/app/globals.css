@@ -88,7 +88,7 @@
     @apply text-sm text-[var(--color-text-muted)];
   }
   .card-title-text {
-    @apply inline-block bg-[var(--color-text-surface)] tracking-wider font-extralight rounded-md py-1 px-2 md:px-4 text-[10px] md:text-sm text-white/70;
+    @apply max-w-max bg-[var(--color-text-surface)] tracking-widest font-extralight rounded-md py-1 px-2 md:px-4 text-[10px] md:text-sm text-white/70;
   }
   .card-icon {
     @apply text-[var(--color-icon)];
@@ -101,6 +101,11 @@
   }
   .profile-content {
     @apply flex flex-row md:flex-col gap-4 md:gap-8 items-center md:text-center;
+  }
+  .page-title {
+    @apply relative text-2xl md:text-3xl tracking-wider font-bold flex items-center gap-2 pb-2
+             after:content-[''] after:absolute after:-bottom-1 after:left-0
+             after:w-[40px] after:h-[4px] after:bg-[var(--color-primary)] after:rounded-full;
   }
 
   /* ===== Image ===== */

@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gluoin Code",
+  title: "Gluoin Code | My Personal Portofolio",
   description: "Dark theme personal portfolio",
 };
 
