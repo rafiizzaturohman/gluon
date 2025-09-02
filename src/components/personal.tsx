@@ -218,7 +218,7 @@ const MyPersonal = () => {
                 <a href="https://www.instagram.com/fiizzat" target="_blank">
                   <InstagramIcon />
                 </a>
-                <a href="https://www.linkedin.com/in/rafiizza/">
+                <a href="https://www.linkedin.com/in/rafiizza/" target="_blank">
                   <LinkedInIcon />
                 </a>
               </div>

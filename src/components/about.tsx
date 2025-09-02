@@ -6,9 +6,7 @@ const AboutMe = () => {
         p-3 sm:p-5 md:p-6 lg:p-8 
         space-y-6 shadow-lg w-full rounded-2xl"
       >
-        <h1 className="page-title">
-          About Me
-        </h1>
+        <h1 className="page-title">About Me</h1>
 
         <p className="card-text text-xs sm:text-sm md:text-base">
           This portfolio runs with a dark theme only.
