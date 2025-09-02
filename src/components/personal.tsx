@@ -106,7 +106,7 @@ const MyPersonal = () => {
                     transition={{ duration: 0.3 }}
                     className="relative"
                   >
-                    <ChevronUpIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <ChevronDownIcon className="w-4 h-4 sm:w-5 sm:h-5" />
                   </motion.div>
                 ) : (
                   <motion.div
@@ -116,7 +116,7 @@ const MyPersonal = () => {
                     transition={{ duration: 0.3 }}
                     className="relative"
                   >
-                    <ChevronDownIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <ChevronUpIcon className="w-4 h-4 sm:w-5 sm:h-5" />
                   </motion.div>
                 )}
               </AnimatePresence>
