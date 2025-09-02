@@ -13,31 +13,8 @@ import {
 import { InstagramIcon, LinkedInIcon, GitHubIcon } from "@/app/icons";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const profileInfo = [
-  {
-    label: "email",
-    value: "rafiizzaturohman@gmail.com",
-    icon: EnvelopeIcon,
-    link: "mailto:rafiizzaturohman@gmail.com",
-  },
-  {
-    label: "phone",
-    value: "+62 896-4634-3783",
-    icon: PhoneIcon,
-    link: "https://wa.me/6289646343783",
-  },
-  {
-    label: "birthday",
-    value: "May 14, 2004",
-    icon: CakeIcon,
-  },
-  {
-    label: "location",
-    value: "Bandung, Indonesia",
-    icon: MapPinIcon,
-  },
-];
+import { profileInfo } from "@/components/data/profileInfo";
+import { socialLinks } from "@/components/data/socialLinks";
 
 const MyPersonal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -209,18 +186,16 @@ const MyPersonal = () => {
 
               {/* Socials */}
               <div className="flex flex-row gap-3 sm:gap-4 justify-center items-center text-center">
-                <a
-                  href="https://www.github.com/rafiizzaturohman/"
-                  target="_blank"
-                >
-                  <GitHubIcon />
-                </a>
-                <a href="https://www.instagram.com/fiizzat" target="_blank">
-                  <InstagramIcon />
-                </a>
-                <a href="https://www.linkedin.com/in/rafiizza/" target="_blank">
-                  <LinkedInIcon />
-                </a>
+                {socialLinks.map((link, i) => (
+                  <a
+                    key={i}
+                    href={link.href}
+                    target="_blank"
+                    aria-label={link.label}
+                  >
+                    <link.icon />
+                  </a>
+                ))}
               </div>
             </motion.div>
           )}
