@@ -124,7 +124,7 @@ const MyPersonal = () => {
                 {isOpen ? (
                   <motion.div
                     key="up"
-                    initial={{ rotate: 180 }}
+                    initial={{ rotate: -180 }}
                     animate={{ rotate: 0 }}
                     transition={{ duration: 0.3 }}
                     className="relative"
