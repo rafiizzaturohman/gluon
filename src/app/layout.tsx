@@ -2,6 +2,7 @@ import "./globals.css";
 import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Gluoin Code | My Personal Portofolio",
@@ -14,6 +15,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
       <body className="bg-theme text-theme">
         <div className="max-w-7xl mx-auto my-auto">{children}</div>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
