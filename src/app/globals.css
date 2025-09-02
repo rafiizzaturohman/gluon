@@ -99,7 +99,7 @@
     @apply bg-[#292623] p-1 md:p-2 rounded-lg border-1 border-[#d977063d];
   }
   .socmed-icon {
-    @apply w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 text-[var(--color-socmed)] hover:text-white transition-all delay-100 duration-200 ease-in-out fill-current;
+    @apply w-5 sm:w-6 md:w-7 h-5 sm:h-6 md:h-7 text-[var(--color-socmed)] hover:text-white transition-all delay-100 duration-200 ease-in-out fill-current;
   }
   .profile-content {
     @apply flex flex-row md:flex-col items-center gap-3 sm:gap-4 md:gap-6;
