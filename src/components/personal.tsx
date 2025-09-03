@@ -2,15 +2,7 @@
 
 import Image from "next/image";
 import MyPict from "../../public/image/mypict.png";
-import {
-  CakeIcon,
-  ChevronDownIcon,
-  ChevronUpIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-  PhoneIcon,
-} from "@heroicons/react/24/outline";
-import { InstagramIcon, LinkedInIcon, GitHubIcon } from "@/app/icons";
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { profileInfo } from "@/components/data/profileInfo";
