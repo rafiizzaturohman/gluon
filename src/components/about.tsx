@@ -19,10 +19,10 @@ const AboutMe = () => {
           <p className="card-text">
             In addition to web development, I have practical experience in light
             computer services, such as reinstalling operating systems, upgrading
-            RAM, and replacing storage devices (HDD, SSD, NVMe). My goal is to
-            combine technical expertise with curiosity and creativity to deliver
-            solutions that not only work well but also bring real value to
-            users.
+            RAM, and replacing storage devices like HDDs, SSDs, and NVMe drives.
+            My goal is to combine technical expertise with curiosity and
+            creativity to provide solutions that not only work well but also
+            provide real value to users.
           </p>
         </div>
 
