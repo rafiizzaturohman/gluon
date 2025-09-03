@@ -8,9 +8,23 @@ const AboutMe = () => {
       >
         <h1 className="page-title">About Me</h1>
 
-        <p className="card-text text-xs sm:text-sm md:text-base">
-          This portfolio runs with a dark theme only.
-        </p>
+        <div className="space-y-4">
+          <p className="card-text">
+            I'm a Web Developer from Bandung, Indonesia, with a passion for
+            creating functional, user-friendly, and visually appealing websites.
+            I enjoy learning new things and constantly exploring ways to improve
+            my skills in the ever-evolving tech world.
+          </p>
+
+          <p className="card-text">
+            In addition to web development, I have practical experience in light
+            computer services, such as reinstalling operating systems, upgrading
+            RAM, and replacing storage devices (HDD, SSD, NVMe). My goal is to
+            combine technical expertise with curiosity and creativity to deliver
+            solutions that not only work well but also bring real value to
+            users.
+          </p>
+        </div>
 
         {/* Contoh konten panjang biar bisa discroll */}
         <div className="space-y-4">

@@ -87,7 +87,7 @@
     @apply text-sm text-[var(--color-primary)];
   }
   .card-text {
-    @apply text-sm text-[var(--color-text-muted)];
+    @apply leading-relaxed text-xs sm:text-sm md:text-base text-[var(--color-text-muted)];
   }
   .card-title-text {
     @apply text-xs sm:text-sm md:text-base lg:text-base max-w-max bg-[var(--color-text-surface)] tracking-widest font-extralight rounded-md py-1 px-2 md:px-4 text-[10px] text-white/70;
@@ -105,7 +105,7 @@
     @apply flex flex-row md:flex-col items-center gap-3 sm:gap-4 md:gap-6;
   }
   .page-title {
-    @apply relative  text-lg sm:text-xl md:text-2xl lg:text-3xl tracking-wider font-bold flex items-center gap-2 pb-2
+    @apply relative text-lg sm:text-xl md:text-2xl lg:text-3xl tracking-wider font-bold flex items-center gap-2 pb-2
              after:content-[''] after:absolute after:-bottom-1 after:left-0
              after:w-[40px] after:h-[4px] after:bg-[var(--color-primary)] after:rounded-full;
   }
@@ -184,4 +184,9 @@
 * {
   scrollbar-width: thin;
   scrollbar-color: #d97706 transparent;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: black;
 }
