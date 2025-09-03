@@ -10,7 +10,7 @@ const AboutMe = () => {
 
         <div className="space-y-4">
           <p className="card-text">
-            I\'m a Web Developer from Bandung, Indonesia, with a passion for
+            I&apos;m a Web Developer from Bandung, Indonesia, with a passion for
             creating functional, user-friendly, and visually appealing websites.
             I enjoy learning new things and constantly exploring ways to improve
             my skills in the ever-evolving tech world.
