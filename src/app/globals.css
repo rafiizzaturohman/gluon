@@ -17,6 +17,7 @@
     --color-highlight: #facc15;
     --color-border: #d9770626;
     --color-socmed: #bebebe;
+    --color-icon-dev: #ff8800;
   }
 
   body {
@@ -101,13 +102,20 @@
   .socmed-icon {
     @apply w-5 sm:w-6 md:w-7 h-5 sm:h-6 md:h-7 text-[var(--color-socmed)] hover:text-white transition-all delay-100 duration-200 ease-in-out fill-current;
   }
+  .mini-card-icon {
+    @apply w-16 h-16 sm:w-10 sm:h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 
+         text-[var(--color-icon-dev)];
+  }
   .profile-content {
     @apply flex flex-row md:flex-col items-center gap-3 sm:gap-4 md:gap-6;
   }
-  .page-title {
-    @apply relative text-lg sm:text-xl md:text-2xl lg:text-3xl tracking-wider font-bold flex items-center gap-2 pb-2
-             after:content-[''] after:absolute after:-bottom-1 after:left-0
+  .main-page-title {
+    @apply relative text-lg sm:text-xl md:text-2xl lg:text-3xl tracking-wider font-bold flex items-center gap-2 pb-1
+             after:content-[''] after:absolute after:bottom-0 after:left-0
              after:w-[40px] after:h-[4px] after:bg-[var(--color-primary)] after:rounded-full;
+  }
+  .page-title {
+    @apply relative text-base sm:text-lg md:text-xl lg:text-2xl tracking-wider font-bold flex items-center gap-2 pb-1;
   }
   .profile-toggle {
     @apply flex items-center gap-2 text-xs sm:text-sm text-gray-300 hover:text-white absolute top-0 right-0;
@@ -117,6 +125,42 @@
   }
   .card-value {
     @apply text-white text-[10px] sm:text-xs md:text-sm tracking-wide;
+  }
+  .mini-card {
+    @apply relative flex flex-col items-center justify-center text-center
+         rounded-xl space-y-2 p-6 overflow-hidden hover:scale-[103%] 
+         transition-all delay-100 duration-200;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); /* shadow utama */
+  }
+  .mini-card::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(
+      circle at top left,
+      rgba(217, 119, 6, 0.6) 0%,
+      transparent 70%
+    );
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .mini-card-text {
+    @apply text-xs;
+  }
+  .nav-title {
+    @apply text-xs md:text-base lg:text-lg font-light tracking-[0.07em];
+  }
+
+  /* ===== NavBar ===== */
+  .navbar-card {
+    @apply backdrop-blur-lg bg-[var(--color-surface)]/10 px-6 py-4 
+        border-t border-[var(--color-primary)]/50 shadow-lg rounded-t-xl;
+  }
+  .items-layout {
+    @apply flex flex-row justify-evenly text-center items-center text-white/95;
   }
 
   /* ===== Image ===== */
