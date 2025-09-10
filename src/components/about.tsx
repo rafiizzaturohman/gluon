@@ -1,4 +1,6 @@
-import { WebDevIcon, CameraIcon } from "@/app/icons";
+"use client";
+
+import { iDo } from "./data/iDo";
 
 const AboutMe = () => {
   return (
@@ -35,28 +37,15 @@ const AboutMe = () => {
 
           {/* What I Do Card */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="mini-card">
-              <WebDevIcon className="mini-card-icon" />
+            {iDo.map((item, index) => (
+              <div className="mini-card" key={index}>
+                <item.icon className="mini-card-icon" />
 
-              <h6 className="text-center font-semibold">Web Development</h6>
+                <h6 className="text-center font-semibold">{item.label}</h6>
 
-              <p className="card-text">
-                I create responsive and user-friendly websites with clean code
-                and modern design, ensuring great performance on all devices.
-              </p>
-            </div>
-
-            <div className="mini-card">
-              <CameraIcon className="mini-card-icon" />
-
-              <h6 className="text-center font-semibold">Photography</h6>
-
-              <p className="card-text">
-                I capture moments with creativity and precision, delivering
-                high-quality photographs that reflect stories, emotions, and
-                timeless memories.
-              </p>
-            </div>
+                <p className="card-text">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
