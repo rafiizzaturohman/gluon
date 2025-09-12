@@ -1,4 +1,4 @@
-import AboutMe from "@/components/about";
+import ContentCard from "@/components/contentCard";
 import NavBar from "@/components/navbar";
 import MyPersonal from "@/components/personal";
 
@@ -15,7 +15,7 @@ const Home = () => {
       <MyPersonal />
 
       {/* Right Scrollable Card */}
-      <AboutMe />
+      <ContentCard />
     </main>
   );
 };
