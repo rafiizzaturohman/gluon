@@ -35,11 +35,9 @@ const MyPersonal = () => {
   }, []);
 
   return (
-    <aside className="w-full sm:w-[90%] md:w-[60%] lg:w-1/4 mx-auto">
+    <aside className="w-full sm:w-[90%] md:w-[35%] lg:w-1/4 mx-auto transition-all duration-300">
       <div
-        className={`relative profile-card lg:fixed 
-        p-4 sm:p-6 md:px-8 md:pt-12 lg:pt-16 shadow-lg space-y-6
-        transition-all duration-500 ease-in-out
+        className={`profile-card
         ${isOpen ? "pb-6" : "pb-0"}
         `}
       >

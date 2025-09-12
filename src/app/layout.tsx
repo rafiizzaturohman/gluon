@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
-  title: "Gluoin Code | My Personal Portofolio",
+  title: "Gluoin Code | Personal Portofolio",
   description: "Dark theme personal portfolio",
 };
 
