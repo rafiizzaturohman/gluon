@@ -17,7 +17,7 @@ export const profileInfo: ProfileItem[] = [
     label: "email",
     value: "rafiizzaturohman@gmail.com",
     icon: EnvelopeIcon,
-    link: "mailto:rafiizzaturohman@gmail.com",
+    link: "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=rafiizzaturohman@gmail.com",
   },
   {
     label: "phone",

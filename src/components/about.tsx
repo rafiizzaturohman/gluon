@@ -4,7 +4,7 @@ import WhatIDo from "./card-content/about/whatido";
 
 const AboutMe = () => {
   return (
-    <section className="space-y-6">
+    <section className="content-card space-y-6">
       <div className="space-y-3">
         <h1 className="main-page-title">About Me</h1>
 
