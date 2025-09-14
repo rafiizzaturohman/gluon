@@ -18,7 +18,7 @@ const NavBar = ({ setActiveTab, activeTab }: Props) => {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`relative py-0.5 text-sm font-medium transition-colors capitalize ${
+              className={`relative py-0.5 text-sm font-medium transition-colors capitalize hover:text-gray-400 cursor-pointer ${
                 activeTab === tab ? "text-yellow-400" : "text-gray-300"
               }`}
             >
