@@ -1,37 +1,34 @@
 import { BookIcon } from "@/app/icons";
-
-const educationData = [
-  {
-    title: "Yadika Soreang Vocational School",
-    period: "2019 — 2022",
-    description:
-      "Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.",
-  },
-  {
-    title: "Rubicamp",
-    period: "Oct 2022 — Dec 2022",
-    description:
-      "Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis..",
-  },
-  {
-    title: "STMIK Mardira Indonesia",
-    period: "2025 — Now",
-    description:
-      "Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur magni dolores eos.",
-  },
-];
+import educationData from "./data/eduData";
 
 const MyResume = () => {
   return (
     <section className="content-card">
-      <div>
-        {educationData.map((eduItem, index) => (
-          <div key={index}>
-            <h6>{eduItem.title}</h6>
-            <p className="text-amber-500">{eduItem.period}</p>
-            <p>{eduItem.description}</p>
+      <div className="space-y-4 sm:space-y-8">
+        <h1 className="main-page-title">Resume</h1>
+
+        <div className="space-y-2 sm:space-y-3">
+          <div className="space-y-1">
+            <div className="flex flex-row gap-2 items-center">
+              <BookIcon className="card-icon w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+              <h6>Education</h6>
+            </div>
           </div>
-        ))}
+
+          <div className="space-y-6 border-l-[0.5px] ml-2 pl-3 md:ml-3 border-white/50">
+            {educationData.map((eduItem, index) => (
+              <div key={index}>
+                <h6 className="text-sm">{eduItem.title}</h6>
+                <p className="text-xs text-amber-500">{eduItem.period}</p>
+                <p className="text-[10px] sm:text-sm">{eduItem.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="space-y-3">
+          <div className="space-y-1"></div>
+        </div>
       </div>
     </section>
   );
