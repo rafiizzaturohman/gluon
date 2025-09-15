@@ -7,15 +7,19 @@ const MyResume = () => {
       <div className="space-y-4 sm:space-y-8">
         <h1 className="main-page-title">Resume</h1>
 
-        <div className="space-y-2 sm:space-y-3">
+        <div className="space-y-6 sm:space-y-3">
           <div className="space-y-1">
-            <div className="flex flex-row gap-2 items-center">
-              <BookIcon className="card-icon w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-              <h6>Education</h6>
+            <div className="flex flex-row gap-3 items-center">
+              <div className="border border-amber-400 p-1.5 shadow-xs shadow-white rounded-lg">
+                <BookIcon className="card-icon w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
+              </div>
+              <p className="text-base text-white tracking-wide font-semibold">
+                Education
+              </p>
             </div>
           </div>
 
-          <div className="space-y-6 border-l-[0.5px] ml-2 pl-3 md:ml-3 border-white/50">
+          <div className="space-y-6 border-l-[0.5px] ml-3 pl-3 md:ml-4 border-white/50">
             {educationData.map((eduItem, index) => (
               <div key={index}>
                 <h6 className="text-sm">{eduItem.title}</h6>
