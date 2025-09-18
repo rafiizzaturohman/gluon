@@ -1,6 +1,7 @@
 "use client";
 
 import AboutMe from "./about";
+import MyContact from "./contact";
 import MyResume from "./resume";
 
 type Props = {
@@ -15,9 +16,7 @@ const ContentCard = ({ activeTab }: Props) => {
       {activeTab === "portfolio" && (
         <h1 className="text-2xl font-bold">Portofolio Section</h1>
       )}
-      {activeTab === "contact" && (
-        <h1 className="text-2xl font-bold">Contact Section</h1>
-      )}
+      {activeTab === "contact" && <MyContact />}
     </section>
   );
 };
