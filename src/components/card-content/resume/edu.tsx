@@ -7,7 +7,7 @@ const Education = () => {
       <div className="space-y-1">
         <div className="flex flex-row gap-2 items-center">
           <div className="resume-icon">
-            <BookIcon className="card-icon w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
+            <BookIcon className="card-icon w-3 h-3 md:w-4 md:h-4" />
           </div>
           <p className="text-base sm:text-lg md:text-xl text-white tracking-wide font-semibold">
             Education
