@@ -1,7 +1,7 @@
 const educationData = [
   {
     title: "Yadika Soreang Vocational School",
-    period: "2019 — 2022",
+    period: "Jul 2019 — Jun 2022",
     description:
       "Finished my journey in Software Engineering, gaining skills in coding, app development, and software fundamentals.",
   },
