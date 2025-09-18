@@ -18,8 +18,8 @@ const NavBar = ({ setActiveTab, activeTab }: Props) => {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`relative py-0.5 text-sm font-medium transition-colors capitalize hover:text-gray-400 cursor-pointer ${
-                activeTab === tab ? "text-yellow-400" : "text-gray-300"
+              className={`relative py-0.5 text-xs font-medium transition-colors capitalize hover:text-gray-400 cursor-pointer ${
+                activeTab === tab ? "text-[#d97706]" : "text-gray-300"
               }`}
             >
               {tab}
@@ -28,7 +28,7 @@ const NavBar = ({ setActiveTab, activeTab }: Props) => {
               {activeTab === tab && (
                 <motion.div
                   layoutId="underline"
-                  className="absolute left-0 right-0 h-[2px] bg-yellow-400 rounded-full"
+                  className="absolute left-0 right-0 h-[2px] bg-[#d97706] rounded-full"
                   transition={{ type: "spring", stiffness: 300, damping: 25 }}
                 />
               )}
