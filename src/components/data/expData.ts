@@ -1,7 +1,7 @@
 const experienceData = [
   {
     title: "Admin & Packer Online Shop",
-    period: "Dec 2022 — May 2025",
+    period: "Jan 2023 — May 2025",
     description:
       "Finished my journey in Software Engineering, gaining skills in coding, app development, and software fundamentals.",
   },
