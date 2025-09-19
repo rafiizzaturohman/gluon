@@ -15,6 +15,13 @@ The goal of this project is to showcase **About Me**, **Resume**, **Portfolio**,
 
 ---
 
+## 🌍 Live Demo
+
+Check out the live version here:  
+👉 [gluoin.vercel.app](https://gluoin.vercel.app)
+
+---
+
 ## 📌 Features
 
 - Responsive design for desktop and mobile.
