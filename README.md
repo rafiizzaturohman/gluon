@@ -1,4 +1,4 @@
-# Personal Portfolio Website
+# 🐻‍❄️ Personal Portfolio Website
 
 This is a personal portfolio website built with **Next.js 14** using the **App Router**.  
 The goal of this project is to showcase **About Me**, **Resume**, **Portfolio**, and **Contact** sections in a clean, responsive, and animated interface.
