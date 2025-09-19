@@ -3,7 +3,7 @@ import educationData from "@/components/data/eduData";
 
 const Education = () => {
   return (
-    <div className="space-y-2 sm:space-y-3">
+    <div>
       <div className="space-y-1">
         <div className="flex flex-row gap-2 items-center">
           <div className="resume-icon">
@@ -15,7 +15,7 @@ const Education = () => {
         </div>
       </div>
 
-      <div className="relative space-y-6 border-l-[0.5px] ml-3 pl-3 md:pl-4 md:ml-4 border-white/30">
+      <div className="relative space-y-6 border-l-[0.5px] py-3 sm:py-4 ml-3 pl-3 md:pl-4 md:ml-4 border-white/30">
         {educationData.map((eduItem, index) => (
           <div key={index} className="relative">
             <span className="bullet-border">
