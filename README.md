@@ -11,8 +11,7 @@ The goal of this project is to showcase **About Me**, **Resume**, **Portfolio**,
 - **[TypeScript](https://www.typescriptlang.org/)** – Type-safe development.
 - **[Tailwind CSS](https://tailwindcss.com/)** – Utility-first CSS framework for styling.
 - **[Framer Motion](https://www.framer.com/motion/)** – Smooth animations and page transitions.
-- **[Shadcn UI](https://ui.shadcn.com/)** – Prebuilt accessible UI components.
-- **[Lucide Icons](https://lucide.dev/)** – Modern and customizable icon set.
+- **[Lineicons](https://lineicons.com/)** – Lightweight line-based icon library.
 
 ---
 
@@ -20,7 +19,7 @@ The goal of this project is to showcase **About Me**, **Resume**, **Portfolio**,
 
 - Responsive design for desktop and mobile.
 - Smooth animated transitions between sections (About, Resume, Portfolio, Contact).
-- Custom SVG icons (Book for Education, Briefcase/Hourglass for Work Experience).
+- Custom timeline with **Lineicons** (Book for Education, Briefcase/Hourglass for Work Experience, etc.).
 - Timeline-based resume presentation.
 - Easy customization for personal projects and portfolio items.
 
