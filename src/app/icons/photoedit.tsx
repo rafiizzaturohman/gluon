@@ -5,7 +5,7 @@ const PhotoEdit = ({ className }: { className?: string }) => {
       viewBox="0 0 280 176"
       shapeRendering="geometricPrecision"
       textRendering="geometricPrecision"
-      className="w-16 h-16 text-orange-500"
+      className={className}
     >
       <rect
         width="271.044993"

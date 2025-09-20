@@ -3,7 +3,7 @@ import Experience from "./card-content/resume/exp";
 
 const MyResume = () => {
   return (
-    <section className="content-card">
+    <section>
       <div className="space-y-4 sm:space-y-8">
         <h1 className="main-page-title">Resume</h1>
 

@@ -13,14 +13,18 @@ const Home = () => {
       className="min-h-screen flex flex-col md:flex-row gap-2 lg:gap-8 
       px-3 sm:px-4 md:px-6 lg:px-10 py-4 pb-14 md:py-10 lg:py-16"
     >
-      {/* NavBar */}
-      <NavBar activeTab={activeTab} setActiveTab={setActiveTab} />
+      {/* NavBar Mobile */}
+      <NavBar
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        variant="mobile"
+      />
 
       {/* Left Fixed Card */}
       <MyPersonal />
 
       {/* Right Scrollable Card */}
-      <ContentCard activeTab={activeTab} />
+      <ContentCard activeTab={activeTab} setActiveTab={setActiveTab} />
     </main>
   );
 };

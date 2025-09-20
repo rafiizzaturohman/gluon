@@ -4,9 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import AboutMe from "./about";
 import MyContact from "./contact";
 import MyResume from "./resume";
+import NavBar from "./navbar"; // tambahkan import
 
 type Props = {
   activeTab: string;
+  setActiveTab: (tab: string) => void; // tambahkan
 };
 
 const variants = {
@@ -15,9 +17,19 @@ const variants = {
   exit: { opacity: 0, y: -20, transition: { duration: 0.3 } },
 };
 
-const ContentCard = ({ activeTab }: Props) => {
+const ContentCard = ({ activeTab, setActiveTab }: Props) => {
   return (
-    <section className="flex-1 h-full pb-1.5 overflow-hidden">
+    <section className="content-card relative flex-1 h-full overflow-hidden">
+      {/* Navbar versi desktop (pojok kanan atas) */}
+      <div className="hidden md:block absolute top-0 right-0 z-50">
+        <NavBar
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          variant="desktop"
+        />
+      </div>
+
+      {/* Isi content */}
       <AnimatePresence mode="wait">
         {activeTab === "about" && (
           <motion.div
