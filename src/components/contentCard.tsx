@@ -5,6 +5,7 @@ import AboutMe from "./about";
 import MyContact from "./contact";
 import MyResume from "./resume";
 import NavBar from "./navbar"; // tambahkan import
+import MyPortfolio from "./portfolio";
 
 type Props = {
   activeTab: string;
@@ -66,7 +67,7 @@ const ContentCard = ({ activeTab, setActiveTab }: Props) => {
             exit="exit"
             className="h-full"
           >
-            <h1 className="text-2xl font-bold">Portofolio Section</h1>
+            <MyPortfolio />
           </motion.div>
         )}
 

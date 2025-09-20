@@ -232,8 +232,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d97706; /* warna utama (amber-600) */
-  border-radius: 9999px; /* biar bulat */
+  background: var(--color-primary); /* warna utama (amber-600) */
+  border-radius: 100%; /* biar bulat */
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -243,7 +243,7 @@
 /* Firefox support */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #d97706 transparent;
+  scrollbar-color: var(--color-primary) transparent;
 }
 
 ::selection {

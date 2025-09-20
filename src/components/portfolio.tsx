@@ -1,8 +1,8 @@
-const MyContact = () => {
+const MyPortfolio = () => {
   return (
     <section className="space-y-6">
       <div className="space-y-6">
-        <h1 className="main-page-title">Contact</h1>
+        <h1 className="main-page-title">Portfolio</h1>
 
         <div className="space-y-4">
           <blockquote className="card-text">
@@ -26,4 +26,4 @@ const MyContact = () => {
   );
 };
 
-export default MyContact;
+export default MyPortfolio;
