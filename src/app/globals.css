@@ -127,7 +127,7 @@
 
   /* Mini Card */
   .mini-card {
-    @apply relative flex flex-col lg:flex-row lg:space-x-3 items-center md:items-start justify-center text-center md:text-left
+    @apply relative flex flex-col lg:flex-row lg:space-x-3 items-center justify-center text-center md:text-left
          rounded-xl space-y-1 sm:space-y-0 p-4 md:p-6 overflow-hidden hover:scale-[103%] 
          transition-all delay-100 duration-200;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); /* shadow utama */
@@ -148,8 +148,8 @@
     pointer-events: none;
   }
   .mini-card-icon {
-    @apply w-16 h-16 sm:w-10 sm:h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 
-         text-[var(--color-icon-dev)];
+    @apply w-16 h-16 sm:w-10 sm:h-10 md:w-16 md:h-16 lg:w-[72px] lg:h-[72px] 
+         shrink-0 text-[var(--color-icon-dev)];
   }
   .mini-card-text {
     @apply text-xs sm:text-sm;
