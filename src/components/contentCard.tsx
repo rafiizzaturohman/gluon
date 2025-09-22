@@ -20,7 +20,7 @@ const variants = {
 
 const ContentCard = ({ activeTab, setActiveTab }: Props) => {
   return (
-    <section className="content-card relative flex-1 h-full overflow-hidden">
+    <section className="content-card mb-1.5 relative flex-1 h-full overflow-hidden">
       {/* Navbar versi desktop (pojok kanan atas) */}
       <div className="hidden md:block absolute top-0 right-0 z-50">
         <NavBar
