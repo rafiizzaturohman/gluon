@@ -1,3 +1,5 @@
+"use client";
+
 import { BookIcon } from "@/app/icons";
 import educationData from "@/components/data/eduData";
 

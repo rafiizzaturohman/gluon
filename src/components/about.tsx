@@ -1,6 +1,6 @@
 "use client";
 
-import WhatIDo from "./card-content/about/whatido";
+import WhatIDo from "@/components/card-content/about/whatido";
 
 const AboutMe = () => {
   return (

@@ -1,3 +1,5 @@
+"use client";
+
 import { BookIcon } from "@/app/icons";
 import experienceData from "@/components/data/expData";
 

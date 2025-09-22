@@ -1,3 +1,5 @@
+"use client";
+
 import { iDo } from "@/components/data/iDo";
 
 const WhatIDo = () => {

@@ -1,5 +1,7 @@
-import Education from "./card-content/resume/edu";
-import Experience from "./card-content/resume/exp";
+"use client";
+
+import Education from "@/components/card-content/resume/edu";
+import Experience from "@/components/card-content/resume/exp";
 
 const MyResume = () => {
   return (

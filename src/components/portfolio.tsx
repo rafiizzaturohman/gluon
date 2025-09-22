@@ -1,3 +1,5 @@
+"use client";
+
 const MyPortfolio = () => {
   return (
     <section className="space-y-6">

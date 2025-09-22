@@ -1,3 +1,5 @@
+"use client";
+
 const MyContact = () => {
   return (
     <section className="space-y-6">
