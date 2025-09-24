@@ -17,7 +17,7 @@ const Experience = () => {
         </div>
       </div>
 
-      <div className="relative space-y-6 border-l-[0.5px] ml-3 py-3 sm:py-4 pl-3 md:pl-4 md:ml-4 border-white/30">
+      <div className="relative space-y-6 border-l-[0.5px] py-3 sm:py-4 ml-[11.5px] pl-3 md:pl-4 md:ml-[14px] border-white/30">
         {experienceData.map((expItem, index) => (
           <div key={index} className="relative">
             <span className="bullet-border">
