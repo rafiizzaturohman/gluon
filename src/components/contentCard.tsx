@@ -13,9 +13,9 @@ type Props = {
 };
 
 const variants = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-  exit: { opacity: 0, y: -20, transition: { duration: 0.3 } },
+  initial: { opacity: 0, x: -80 },
+  animate: { opacity: 1, x: 0, transition: { duration: 0.4 } },
+  exit: { opacity: 0, x: -80, transition: { duration: 0.3 } },
 };
 
 const ContentCard = ({ activeTab, setActiveTab }: Props) => {
