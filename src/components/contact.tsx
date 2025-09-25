@@ -10,14 +10,14 @@ const MyContact = () => {
 
       <Maps />
 
-      <div id="contact-input" className="space-y-6">
+      <div id="contact-input" className="space-y-4 sm:space-y-6">
         <h3 className="capitalize tracking-wide text-base font-semibold sm:text-lg md:text-xl">
           contact form
         </h3>
 
         <form className="space-y-1">
-          <div className="space-y-4">
-            <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row w-full space-x-2">
+          <div className="space-y-3 sm:space-y-4">
+            <div className="flex flex-col space-y-3 md:space-y-0 md:flex-row w-full space-x-2">
               <input
                 placeholder="Full name"
                 type="text"
