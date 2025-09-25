@@ -22,7 +22,7 @@
 
   body {
     @apply bg-[var(--color-bg)] text-[var(--color-text)] leading-relaxed;
-    font-family: "Inter", sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
   h1,
@@ -81,7 +81,7 @@
     @apply p-4 space-y-2;
   }
   .card-title {
-    @apply text-sm sm:text-base md:text-lg lg:text-xl font-semibold tracking-wider text-[var(--color-text)];
+    @apply text-sm sm:text-base md:text-lg lg:text-xl font-semibold tracking-wide text-[var(--color-text)];
   }
   .card-subtitle {
     @apply text-sm text-[var(--color-primary)];
@@ -90,7 +90,7 @@
     @apply leading-relaxed text-xs sm:text-sm md:text-base text-[var(--color-text-muted)];
   }
   .card-title-text {
-    @apply text-xs sm:text-sm md:text-base lg:text-base max-w-max bg-[var(--color-text-surface)] tracking-widest font-extralight rounded-md py-1 px-2 md:px-4 text-[10px] text-white/70;
+    @apply text-xs sm:text-sm md:text-base lg:text-base max-w-max bg-[var(--color-text-surface)] tracking-wider font-extralight rounded-md py-1 px-2 md:px-4 text-[10px] text-white/70;
   }
   .card-icon {
     @apply text-[var(--color-icon)];
@@ -217,6 +217,18 @@
   }
   .btn-secondary:hover {
     background-color: rgba(217, 119, 6, 0.1);
+  }
+
+  /* ===== Input ====== */
+  .textarea-input {
+    @apply border-2 border-amber-500/50 focus:border-amber-600 focus:outline-none 
+             focus:shadow-lg focus:shadow-amber-600/30
+             rounded-lg p-2 h-48 w-full transition-all ease-in-out duration-500;
+  }
+  .field-input {
+    @apply border-2 border-amber-500/50 focus:border-amber-600 focus:outline-none 
+             focus:shadow-lg focus:shadow-amber-600/30
+             rounded-lg p-2 w-full transition-all ease-in-out duration-500;
   }
 
   /* ===== Grid Layout ===== */
