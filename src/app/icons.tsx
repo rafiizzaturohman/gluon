@@ -5,3 +5,4 @@ export { default as WebDevIcon } from "./icons/webDev";
 export { default as CameraIcon } from "./icons/camera";
 export { default as PhotoEditIcon } from "./icons/photoedit";
 export { default as BookIcon } from "./icons/book";
+export { default as PaperPlaneIcon } from "./icons/paperPlane";
