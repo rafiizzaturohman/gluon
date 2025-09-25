@@ -25,7 +25,7 @@ const MyContact = () => {
               />
               <input
                 placeholder="Email address"
-                type="text"
+                type="email"
                 className="field-input"
               />
             </div>
