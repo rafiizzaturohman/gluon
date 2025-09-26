@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <main
-      className="min-h-screen flex flex-col md:flex-row gap-2 lg:gap-12 
+      className="min-h-screen flex flex-col md:flex-row gap-2 lg:gap-14 
       px-3 sm:px-4 md:px-6 lg:px-10 py-4 pb-14 md:py-10 lg:py-16"
     >
       {/* NavBar Mobile */}
