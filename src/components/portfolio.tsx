@@ -51,7 +51,7 @@ const MyPortfolio = () => {
             {/* Text */}
             <div>
               <h6 className="text-sm md:text-lg font-semibold">{item.title}</h6>
-              <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-xs md:text-sm text-gray-400">
                 {item.subtitle}
               </p>
             </div>
