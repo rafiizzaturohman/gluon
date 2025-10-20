@@ -4,7 +4,7 @@
   "private": true,
   "main": "dist/main.ts",
   "author": "Gluoin Code",
-  "description": "A ",
+  "description": "Dark Theme Personal Portofolio —— Designed by Code Wizard",
   "scripts": {
     "dev": "next dev --turbopack",
     "dev:electron": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && electron .\"",
