@@ -7,7 +7,9 @@ const MyResume = () => {
   return (
     <section>
       <div className="space-y-4 sm:space-y-8">
-        <h1 className="main-page-title">Resume</h1>
+        <div>
+          <h1 className="main-page-title">Resume</h1>
+        </div>
 
         <div className="space-y-8">
           <Education />
