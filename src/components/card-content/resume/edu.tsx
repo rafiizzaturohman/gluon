@@ -29,6 +29,10 @@ const Education = () => {
                 {eduItem.title}
               </h6>
 
+              <p className="text-[10px] sm:text-xs md:text-base text-neutral-500">
+                {eduItem.vocation}
+              </p>
+
               <p className="text-[10px] sm:text-xs md:text-base text-amber-500">
                 {eduItem.period}
               </p>

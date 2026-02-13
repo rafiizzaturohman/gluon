@@ -29,6 +29,10 @@ const Experience = () => {
                 {expItem.title}
               </h6>
 
+              <p className="text-[10px] sm:text-xs md:text-base text-neutral-500">
+                {expItem.company}
+              </p>
+
               <p className="text-[10px] sm:text-xs md:text-base text-amber-500">
                 {expItem.period}
               </p>
