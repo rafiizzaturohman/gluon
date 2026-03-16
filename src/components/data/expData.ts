@@ -7,6 +7,13 @@ const experienceData = [
       "Worked as admin and packer, focusing on order management and customer satisfaction.",
   },
   {
+    title: "IT Support",
+    company: "SMP Negeri 1 Cangkuang",
+    period: "Feb 2026 — Apr 2026",
+    description:
+      "Ensuring seamless educational operations by preparing IT infrastructure, including full computer setup and high-speed internet deployment for classroom activities and standardized testing.",
+  },
+  {
     title: "Coding & multimedia teacher",
     company: "SMP Plus Insan Qinthara",
     period: "Jun 2025 — Now",
