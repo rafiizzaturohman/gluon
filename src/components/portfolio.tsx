@@ -10,8 +10,8 @@ const MyPortfolio = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {portfolioItems.map((item, index) => (
-          <a target="_blank" href={item.link}>
-            <div key={index} className="space-y-2 cursor-pointer">
+          <a key={index} target="_blank" href={item.link}>
+            <div className="space-y-2 cursor-pointer">
               {/* Image with hover overlay */}
               <div className="group relative w-full aspect-[16/10] overflow-hidden rounded-xl shadow-md">
                 <Image
