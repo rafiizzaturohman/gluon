@@ -1,5 +1,12 @@
 const experienceData = [
   {
+    title: "IT Support",
+    company: "SMK Yadika Soreang",
+    period: "Aug 2022 - Sep 2022",
+    description:
+      "Ensuring the smooth execution of ANBK through meticulous IT infrastructure readiness, from hardware troubleshooting and software installation to real-time technical monitoring during the assessment period.",
+  },
+  {
     title: "Admin & Packer Online Shop",
     company: "BlindWear",
     period: "Jan 2023 — May 2025",
