@@ -24,7 +24,7 @@ const Experience = () => {
               <span className="bullet"></span>
             </span>
 
-            <div className="capitalize">
+            <div>
               <h6 className="text-xs sm:text-sm md:text-base">
                 {expItem.title}
               </h6>
