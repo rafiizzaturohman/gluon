@@ -8,7 +8,7 @@ const MyPortfolio = () => {
     <section className="space-y-6">
       <h1 className="main-page-title">Portfolio</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {portfolioItems.map((item, index) => (
           <a key={index} target="_blank" href={item.link}>
             <div className="space-y-2 cursor-pointer">

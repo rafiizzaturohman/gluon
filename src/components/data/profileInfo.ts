@@ -26,7 +26,7 @@ export const profileInfo: ProfileItem[] = [
     link: "https://wa.me/6289646343783",
   },
   {
-    label: "birthday",
+    label: "birthdate",
     value: "May 14, 2004",
     icon: CakeIcon,
   },
