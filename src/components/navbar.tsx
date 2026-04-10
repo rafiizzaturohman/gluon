@@ -59,7 +59,7 @@ const NavBar = ({ setActiveTab, activeTab, variant = "mobile" }: Props) => {
                 {activeTab === tab && (
                   <motion.div
                     layoutId="underline"
-                    className="absolute left-0 right-0 h-[2px] bg-[#d97706] rounded-full -bottom-1"
+                    className="absolute left-0 right-0 h-[3px] w-auto bg-[#d97706] rounded-full -bottom-1"
                     transition={{ type: "spring", stiffness: 300, damping: 25 }}
                   />
                 )}
