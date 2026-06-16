@@ -227,7 +227,7 @@
   }
   .field-input {
     @apply border-2 border-amber-500/50 focus:border-amber-600 focus:outline-none 
-             focus:shadow-lg focus:shadow-amber-600/30 text-sm sm:text-base md:text-lg
+             focus:shadow-lg focus:shadow-amber-600/30 text-xs sm:text-sm md:text-base
              rounded-lg p-2 w-full transition-all ease-in-out duration-500;
   }
   .sendmes-btn {

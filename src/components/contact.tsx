@@ -7,20 +7,19 @@ const MyContact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const form = e.currentTarget;
+    const formData = new FormData(e.currentTarget);
 
-    const subject = (form.querySelector("#subject-input") as HTMLInputElement)
-      .value;
+    const subject = formData.get("subject") as string;
 
-    const email = (form.querySelector("#email") as HTMLInputElement).value;
+    const email = formData.get("email") as string;
 
-    const message = (form.querySelector("#message") as HTMLInputElement).value;
+    const message = formData.get("message") as string;
 
     const body = `Email pengirim: ${email}
 
 Pesan:
 ${message}
-    `;
+`;
 
     const gmailUrl =
       `https://mail.google.com/mail/?view=cm&fs=1` +
@@ -48,8 +47,8 @@ ${message}
               <input
                 placeholder="Full name - Subject"
                 type="text"
-                id="subject-input"
-                name="fullname"
+                id="subject"
+                name="subject"
                 className="field-input"
               />
 
