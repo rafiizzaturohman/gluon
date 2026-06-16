@@ -21,6 +21,11 @@ Pesan:
 ${message}
 `;
 
+    if (!subject.trim() || !email.trim() || !message.trim()) {
+      alert("Please fill all fields");
+      return;
+    }
+
     const gmailUrl =
       `https://mail.google.com/mail/?view=cm&fs=1` +
       `&to=rafiizzaturohman@gmail.com` +
