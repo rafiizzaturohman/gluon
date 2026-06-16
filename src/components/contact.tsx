@@ -15,7 +15,12 @@ const MyContact = () => {
           contact form
         </h3>
 
-        <form className="space-y-1">
+        <form
+          className="space-y-1"
+          action="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=rafiizzaturohman@gmail.com"
+          method="post"
+          encType="multipart/form-data</div>"
+        >
           <div className="space-y-3 sm:space-y-4">
             <div className="flex flex-col space-y-3 md:space-y-0 md:flex-row w-full space-x-2">
               <input
@@ -24,6 +29,7 @@ const MyContact = () => {
                 name="fullname"
                 className="field-input"
               />
+
               <input
                 placeholder="Email address"
                 type="email"
@@ -43,7 +49,7 @@ const MyContact = () => {
           </div>
 
           <div className="flex justify-end">
-            <button className="sendmes-btn">
+            <button type="submit" className="sendmes-btn">
               <PaperPlaneIcon className="send-icon" />
               <p className="send-text">Send Message</p>
             </button>
