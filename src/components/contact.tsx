@@ -4,6 +4,33 @@ import { PaperPlaneIcon } from "@/app/icons";
 import Maps from "@/components/card-content/contact/maps";
 
 const MyContact = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+
+    const subject = (form.querySelector("#subject-input") as HTMLInputElement)
+      .value;
+
+    const email = (form.querySelector("#email") as HTMLInputElement).value;
+
+    const message = (form.querySelector("#message") as HTMLInputElement).value;
+
+    const body = `Email pengirim: ${email}
+
+Pesan:
+${message}
+    `;
+
+    const gmailUrl =
+      `https://mail.google.com/mail/?view=cm&fs=1` +
+      `&to=rafiizzaturohman@gmail.com` +
+      `&su=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(body)}`;
+
+    window.open(gmailUrl, "_blank");
+  };
+
   return (
     <section className="space-y-6">
       <h1 className="main-page-title">Contact</h1>
@@ -15,24 +42,21 @@ const MyContact = () => {
           contact form
         </h3>
 
-        <form
-          className="space-y-1"
-          action="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=rafiizzaturohman@gmail.com"
-          method="post"
-          encType="multipart/form-data</div>"
-        >
+        <form className="space-y-1" onSubmit={handleSubmit}>
           <div className="space-y-3 sm:space-y-4">
             <div className="flex flex-col space-y-3 md:space-y-0 md:flex-row w-full space-x-2">
               <input
-                placeholder="Full name"
+                placeholder="Full name - Subject"
                 type="text"
+                id="subject-input"
                 name="fullname"
                 className="field-input"
               />
 
               <input
-                placeholder="Email address"
+                placeholder="Email"
                 type="email"
+                id="email"
                 name="email"
                 className="field-input"
               />
