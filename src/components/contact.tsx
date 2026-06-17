@@ -11,6 +11,8 @@ const MyContact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    console.log("Submit Clicked");
+
     const formData = new FormData(e.currentTarget);
 
     const subject = formData.get("subject") as string;
