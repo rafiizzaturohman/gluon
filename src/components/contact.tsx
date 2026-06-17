@@ -11,8 +11,6 @@ const MyContact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    console.log("Submit Clicked");
-
     const formData = new FormData(e.currentTarget);
 
     const subject = String(formData.get("subject") ?? "");
@@ -22,6 +20,13 @@ const MyContact = () => {
     const email = String(formData.get("email") ?? "");
 
     const message = String(formData.get("message") ?? "");
+
+    console.log(`Data
+Subjek: ${subject}
+name: ${name}
+email: ${email}
+message: ${message}
+`);
 
     const body = `Email pengirim: ${email}
 Nama pengirim: ${name}
