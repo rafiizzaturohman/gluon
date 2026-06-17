@@ -15,13 +15,13 @@ const MyContact = () => {
 
     const formData = new FormData(e.currentTarget);
 
-    const subject = formData.get("subject") as string;
+    const subject = String(formData.get("subject") ?? "");
 
-    const name = formData.get("name") as string;
+    const name = String(formData.get("name") ?? "");
 
-    const email = formData.get("email") as string;
+    const email = String(formData.get("email") ?? "");
 
-    const message = formData.get("message") as string;
+    const message = String(formData.get("message") ?? "");
 
     const body = `Email pengirim: ${email}
 Nama pengirim: ${name}
