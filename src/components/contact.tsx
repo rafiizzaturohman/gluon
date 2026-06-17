@@ -21,13 +21,6 @@ const MyContact = () => {
 
     const message = String(formData.get("message") ?? "");
 
-    console.log(`Data
-Subjek: ${subject}
-name: ${name}
-email: ${email}
-message: ${message}
-`);
-
     const body = `Email pengirim: ${email}
 Nama pengirim: ${name}
 
