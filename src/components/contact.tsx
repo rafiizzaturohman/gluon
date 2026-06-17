@@ -42,7 +42,7 @@ ${message}
       `&su=${encodeURIComponent(subject)}` +
       `&body=${encodeURIComponent(body)}`;
 
-    window.open(gmailUrl, "_blank");
+    window.location.href = gmailUrl;
   };
 
   return (
