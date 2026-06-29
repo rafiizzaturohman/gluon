@@ -21,7 +21,7 @@ const experienceData = [
       "Ensuring seamless educational operations by preparing IT infrastructure, including full computer setup and high-speed internet deployment for classroom activities and standardized testing.",
   },
   {
-    title: "Coding & multimedia teacher",
+    title: "Coding & Multimedia Teacher",
     company: "SMP Plus Insan Qinthara",
     period: "Jun 2025 — Now",
     description:
